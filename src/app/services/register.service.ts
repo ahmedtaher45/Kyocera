@@ -14,5 +14,7 @@ export class RegisterService {
   register(Modal: any){
     return this._httpClient.post<GenericResponse<string>>(environment.baseUrl, Modal);
   }
-
+  invite(Modal: any){
+    return this._httpClient.post<GenericResponse<string>>(environment.baseUrl+'/invite', Modal);
+  }
 }

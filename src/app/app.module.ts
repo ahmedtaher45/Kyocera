@@ -35,6 +35,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { LandingPage } from './components/landing-page/landing-page';
 import { Register } from './components/register/register';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -44,7 +45,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     LandingPage,
     Register,
-    AbsPipe  
+    AbsPipe,
+    AdminDashboardComponent  
   ],
   imports: [
     MatTooltipModule,
