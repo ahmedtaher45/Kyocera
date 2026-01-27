@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+             "baseHref": "/Kyocera/",
             "allowedCommonJsDependencies": ["apexcharts"],
             "outputPath": "dist/Orient",
             "index": "src/index.html",
