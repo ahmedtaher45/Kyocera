@@ -1,1 +1,1 @@
-# Orient
+# Kyocera

@@ -52,7 +52,7 @@
                         </mat-form-field>
 
                         <div class="mt-4 text-center">
-                            <button mat-raised-button color="primary" type="submit" [disabled]="RegisterForm.invalid"
+                            <button mat-raised-button color="primary" type="submit" [disabled]="RegisterForm.invalid || isClicked"
                                 class="px-5 py-2 tabeeb_Btn">
                                 <span class="h6">Register</span>
                             </button>

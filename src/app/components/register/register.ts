@@ -11,6 +11,7 @@ import { RegisterService } from 'src/app/services/register.service';
 })
 export class Register {
 
+  isClicked: boolean = false;
 
   constructor(private _registerService: RegisterService) {
 
@@ -30,6 +31,7 @@ RegisterForm = new FormGroup({
   }
 
   onSubmit() {
+    this.isClicked = true;
     if (this.RegisterForm.invalid) {
       this.RegisterForm.markAllAsTouched();
       return;
@@ -39,19 +41,19 @@ RegisterForm = new FormGroup({
       this._registerService.register(Model).subscribe({
       next: (res) => {
         if (res.success) {
+    this.isClicked = false;
           console.log(res.data); 
           alert(res.message);
+
         } else {
           console.error(res.message);
         }
       },
       error: (err) => {
+    this.isClicked = false;
         console.error('Server error', err);
       }
     });
-
-
-
   }
 
 }
