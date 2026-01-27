@@ -19,7 +19,7 @@
           "options": {
              "baseHref": "/Kyocera/",
             "allowedCommonJsDependencies": ["apexcharts"],
-            "outputPath": "dist/Orient",
+            "outputPath": "dist/Kyocera",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [

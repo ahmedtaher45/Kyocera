@@ -2,7 +2,7 @@ export const environment = {
     production: false,
 
     // Orient obleski 
-    baseUrl : "http://97.74.82.75:7418/Auth"
+    baseUrl : "https://kyroce.ahmadtaher45.workers.dev/Auth"
 
     // Wethaq Test
     // baseUrl : "https://localhost:7237/Auth"
