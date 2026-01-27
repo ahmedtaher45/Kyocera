@@ -1,0 +1,150 @@
+// * {
+//       margin: 0;
+//       padding: 0;
+//       box-sizing: border-box;
+//     }
+//     body {
+//       font-family: 'Roboto', sans-serif;
+//       color: #333;
+//       background: #f5f5f5;
+//       line-height: 1.6;
+//     }
+    .container-fluid {
+      background: rgb(255, 255, 255);
+      overflow: hidden;
+
+      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)),
+                   url('https://images.dailynewsegypt.com/2024/04/egypt-aswan-nile-view.jpeg') center/cover no-repeat;
+
+    background-attachment: fixed;     // Optional: Parallax feel (remove if not wanted)
+    background-position: center;      // Keeps important parts centered
+    background-repeat: no-repeat;               
+    }
+    .hero {
+      position: relative;
+      height: 520px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero-content {
+      max-width: 780px;
+      font-weight: 20px;
+      z-index: 2;
+    }
+    .hero  h3{
+        font-weight: bold;
+        font-size: large;
+    }
+    .hero h1 {
+      font-size: 2.6rem;
+      margin-bottom: 1.2rem;
+      text-shadow: 0 3px 12px rgba(231, 115, 7, 0.7);
+    }
+    .logo{
+        width: 200px;
+        height: auto;
+        background: none;
+        text-align: start;
+        display: block;
+    }
+
+    .highlights {
+      padding: 50px 40px;
+      background: url('/assets/imgs/background.jpeg');
+    }
+    .highlights h2 {
+      color: #d00000;
+      font-size: 1.9rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      position: relative;
+    }
+    .highlights h2:after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: #d00000;
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .highlight-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.4rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .highlight-item {
+      display: flex;
+      align-items: flex-start;
+      font-size: 1.15rem;
+      background: #fff;
+      padding: 18px 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+    .highlight-item:hover {
+      transform: translateY(-4px);
+    }
+    .icon {
+      font-size: 1.8rem;
+      margin-right: 18px;
+      color: #d00000;
+      min-width: 40px;
+    }
+    .details {
+      padding: 40px;
+      background: #0d1b2a;
+      color: white;
+      text-align: center;
+    }
+    .details-grid {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+    .detail-item {
+      font-size: 1.3rem;
+    }
+    .detail-item strong {
+      display: block;
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+      color: #ffd60a;
+    }
+    .badges {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+    .badge {
+      background: linear-gradient(145deg, #ffd700, #d4a017);
+      color: #1b263b;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      box-shadow: 0 6px 20px rgba(212,160,23,0.4);
+    }
+    .footer-text {
+      font-size: 1.3rem;
+      margin-top: 2rem;
+      font-style: italic;
+    }
+    @media (max-width: 768px) {
+      .hero { height: 420px; }
+      .hero h1 { font-size: 2.1rem; }
+      .kyocera-logo { font-size: 2.8rem; }
+      .details-grid { gap: 40px; }
+    }

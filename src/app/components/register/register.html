@@ -1,0 +1,65 @@
+<section id="register" class="d-flex align-items-center py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+
+                <div class="card shadow-sm border-0 p-4">
+                    <h1 class="font-colored text-center mb-4">Register to the Event</h1>
+
+                    <form [formGroup]="RegisterForm" (ngSubmit)="onSubmit()">
+
+                        <mat-form-field class="w-100 mb-3" appearance="outline">
+                            <mat-label>First Name</mat-label>
+                            <input matInput formControlName="firstName" type="text" required>
+                            <mat-error *ngIf="f.firstName.hasError('required')">
+                                First name is required
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="w-100 mb-3" appearance="outline">
+                            <mat-label>Second Name</mat-label>
+                            <input matInput formControlName="secondName" type="text" required>
+                            <mat-error *ngIf="f.secondName.hasError('required')">
+                                Second name is required
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="w-100 mb-3" appearance="outline">
+                            <mat-label>Title</mat-label>
+                            <input matInput formControlName="title" type="text" required>
+                            <mat-error *ngIf="f.title.hasError('required')">
+                                Title is required
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="w-100 mb-3" appearance="outline">
+                            <mat-label>Company Name</mat-label>
+                            <input matInput formControlName="companyName" type="text" required>
+                            <mat-error *ngIf="f.companyName.hasError('required')">
+                                Company name is required
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="w-100 mb-3" appearance="outline">
+                            <mat-label>Email Address</mat-label>
+                            <input matInput formControlName="email" type="email" required>
+                            <mat-error *ngIf="f.email.hasError('required')">
+                                Email is required
+                            </mat-error>
+                            <mat-error *ngIf="f.email.hasError('email') && !f.email.hasError('required')">
+                                Please enter a valid email address
+                            </mat-error>
+                        </mat-form-field>
+
+                        <div class="mt-4 text-center">
+                            <button mat-raised-button color="primary" type="submit" [disabled]="RegisterForm.invalid"
+                                class="px-5 py-2 tabeeb_Btn">
+                                <span class="h6">Register</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
