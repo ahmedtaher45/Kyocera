@@ -14,7 +14,7 @@ export class RegisterService {
     // جرب واحد من دول:
     
     // Option 1 (جرب ده الأول):
-    return `https://corsproxy.io/?${encodeURIComponent(environment.API_BASE + endpoint)}`;}
+    return `https://api.allorigins.win/raw?url=${encodeURIComponent(environment.API_BASE + endpoint)}`;}
   
   register(Modal: any){
     return this._httpClient.post<GenericResponse<string>>(this.proxy('/Auth'), Modal);
