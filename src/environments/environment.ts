@@ -4,7 +4,7 @@ export const environment = {
     // Orient obleski 
     // baseUrl : "https://kyroce.ahmadtaher45.workers.dev/Auth"
 
-     API_BASE : 'http://97.74.82.75:7418'
+     API_BASE : 'https://kyrocera-proxy.vercel.app'
 
 
     // Wethaq Test
