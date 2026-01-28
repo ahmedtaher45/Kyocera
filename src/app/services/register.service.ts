@@ -10,11 +10,16 @@ export class RegisterService {
 
   constructor(private _httpClient: HttpClient) { }
 
+    private proxy(endpoint: string): string {
+    // جرب واحد من دول:
+    
+    // Option 1 (جرب ده الأول):
+    return `https://corsproxy.io/?${encodeURIComponent(environment.API_BASE + endpoint)}`;}
   
   register(Modal: any){
-    return this._httpClient.post<GenericResponse<string>>(environment.baseUrl, Modal);
+    return this._httpClient.post<GenericResponse<string>>(this.proxy('/Auth'), Modal);
   }
   invite(Modal: any){
-    return this._httpClient.post<GenericResponse<string>>(environment.baseUrl+'/invite', Modal);
+    return this._httpClient.post<GenericResponse<string>>(this.proxy('/Auth/invite'), Modal);
   }
 }
