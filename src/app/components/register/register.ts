@@ -40,19 +40,17 @@ RegisterForm = new FormGroup({
 
       this._registerService.register(Model).subscribe({
       next: (res) => {
-        if (res.success) {
+      
     this.isClicked = false;
           console.log(res.data); 
           alert(res.message);
-
-        } else {
-          console.error(res.message);
-          alert(res.message);
-        }
       },
       error: (err) => {
     this.isClicked = false;
         console.error('Server error', err);
+        console.error(err.error.message);
+          alert(err.error.message);
+
       }
     });
   }
