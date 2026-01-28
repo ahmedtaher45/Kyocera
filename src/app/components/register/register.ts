@@ -47,6 +47,7 @@ RegisterForm = new FormGroup({
 
         } else {
           console.error(res.message);
+          alert(res.message);
         }
       },
       error: (err) => {
