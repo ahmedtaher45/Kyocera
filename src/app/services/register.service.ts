@@ -8,6 +8,8 @@ import { environment } from 'src/environments/environment';
 })
 export class RegisterService {
 
+  private API_BASE = 'https://kyrocera-proxy.vercel.app';  // String
+
   constructor(private _httpClient: HttpClient) { }
 
     // private proxy(endpoint: string): string {
@@ -17,9 +19,9 @@ export class RegisterService {
     // return `https://api.allorigins.win/raw?url=${encodeURIComponent(environment.API_BASE + endpoint)}`;}
   
   register(Modal: any){
-    return this._httpClient.post<GenericResponse<string>>(`${environment}/Auth`, Modal);
+    return this._httpClient.post<GenericResponse<string>>(`${this.API_BASE}/Auth`, Modal);
   }
   invite(Modal: any){
-    return this._httpClient.post<GenericResponse<string>>(`${environment}/Auth/invite`, Modal);
+    return this._httpClient.post<GenericResponse<string>>(`${this.API_BASE}/Auth/invite`, Modal);
   }
 }
